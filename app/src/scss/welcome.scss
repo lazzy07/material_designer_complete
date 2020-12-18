@@ -1,0 +1,32 @@
+@import "./colors.scss";
+
+.welcomeBackground {
+  border-radius: 10px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.welcomeGradient {
+  background-image: linear-gradient(to right, rgba(0, 245, 200, 0), $DEFAULT_COLOR, $DEFAULT_COLOR);
+}
+
+.welcomeContent {
+  padding: 10px;
+}
+
+
+.fileElement {
+  padding-left: 5;
+  padding-right: 5;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 4;
+  padding-bottom: 4;
+  background-color: $MENUBAR_HOVER_COLOR;
+  margin-top: 15;
+  margin-bottom: 15;
+}
+
+.fileElement:hover {
+  background-color: $TAB_BUTTON_COLOR;
+}

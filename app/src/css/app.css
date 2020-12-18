@@ -1,0 +1,50 @@
+body {
+  background-color: #252525;
+  padding: 0;
+  font-family: "adRegular";
+  user-select: none;
+  color: #fff; }
+
+h1 {
+  color: #fff;
+  font-family: "adBold"; }
+
+.inputter {
+  color: #fff; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0); }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ececec; }
+
+@font-face {
+  font-family: "adBold";
+  src: url("../fonts/AdventPro-Bold.ttf"); }
+@font-face {
+  font-family: "adRegular";
+  src: url("../fonts/AdventPro-Regular.ttf"); }
+.clickable {
+  cursor: pointer; }
+
+.node-editor {
+  scrollbar-width: none; }
+
+.node-editor::-webkit-scrollbar {
+  width: 0;
+  height: 0; }
+
+/*# sourceMappingURL=app.css.map */

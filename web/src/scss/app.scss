@@ -1,0 +1,108 @@
+@import "./colors.scss";
+
+body {
+  background-color: $DEFAULT_COLOR;
+  padding: 0;
+  //min-height: 100vh;
+  font-family: "adRegular", sans-serif;
+  color: $FONT_COLOR;
+}
+
+h1 {
+  color: $FONT_COLOR;
+  font-family: "adBold", sans-serif;
+}
+
+.inputter {
+  color: $FONT_COLOR;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ececec;
+}
+
+@font-face {
+  font-family: "adBold";
+  src: url("../fonts/AdventPro-Bold.ttf");
+}
+
+
+@font-face {
+  font-family: "adRegular";
+  src: url("../fonts/AdventPro-Regular.ttf");
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.node-editor {
+  scrollbar-width: none;
+}
+
+.node-editor {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.defaultBackground {
+  background-color: $DEFAULT_COLOR;
+}
+
+.secondaryBackground {
+  background-color: $MENUBAR_HOVER_COLOR;
+}
+
+.specialColor {
+  color: $ON_HOVER_MENU_TEXT_COLOR;
+}
+
+.errorColor {
+  color: $ERROR_COLOR;
+}
+
+.hoverColor:hover {
+  color: $ON_HOVER_MENU_TEXT_COLOR;
+  cursor: pointer;
+}
+
+.hoverOpacity:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.bgOnHover:hover {
+  background-color: $MENUBAR_HOVER_COLOR;
+
+}
+
+.colorOnHover:hover {
+  color: $ON_HOVER_MENU_TEXT_COLOR;
+
+}
+
+.particles {
+  z-index: -1 !important;
+  height: 100vh;
+}

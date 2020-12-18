@@ -1,0 +1,25 @@
+@import "./colors.scss";
+
+.outlinerElement:hover {
+  background-color: $MENUBAR_HOVER_COLOR;
+}
+
+.outlinerActive {
+  background-color: $BUTTON_COLOR;
+}
+
+.outlinerControllerButton {
+  padding: 2px;
+  margin: 2px;
+  font-size: 8px;
+}
+
+.outlinerControllerButton:hover {
+  background-color: $DEFAULT_COLOR;
+  cursor: pointer;
+}
+
+.outlinerControllerButton:active {
+  background-color: $BUTTON_COLOR;
+  cursor: pointer;
+}

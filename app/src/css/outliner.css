@@ -1,0 +1,20 @@
+.outlinerElement:hover {
+  background-color: #353434; }
+
+.outlinerActive {
+  background-color: #00695C; }
+
+.outlinerControllerButton {
+  padding: 2px;
+  margin: 2px;
+  font-size: 8px; }
+
+.outlinerControllerButton:hover {
+  background-color: #252525;
+  cursor: pointer; }
+
+.outlinerControllerButton:active {
+  background-color: #00695C;
+  cursor: pointer; }
+
+/*# sourceMappingURL=outliner.css.map */

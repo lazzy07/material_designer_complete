@@ -1,0 +1,1 @@
+{"version":3,"file":"alias.js","sourceRoot":"","sources":["../../../../../src/redux/electron-redux/dist/actions/alias.js"],"names":[],"mappings":";AAEA,MAAM,CAAC,cAAc,CAAC,OAAO,EAAE,YAAY,EAAE;IAC3C,KAAK,EAAE,IAAI;CACZ,CAAC,CAAC;AACH,OAAO,CAAC,OAAO,GAAG,KAAK,CAAC,CAAC;AAEzB,iDAAiD;AACjD,IAAI,OAAO,GAAG,SAAS,CAAC;AACxB,OAAO,CAAC,OAAO,GAAG,OAAO,CAAC"}

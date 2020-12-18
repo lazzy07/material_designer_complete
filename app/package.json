@@ -1,0 +1,143 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/react-components": "^3.1.3",
+    "@material-ui/core": "^3.9.3",
+    "apollo-boost": "^0.4.7",
+    "apollo-link-token-refresh": "^0.2.7",
+    "axios": "^0.18.1",
+    "color-convert": "^2.0.0",
+    "compressorjs": "^1.0.6",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-is-dev": "^1.0.1",
+    "electron-redux": "^1.3.1",
+    "electron-root-path": "^1.0.9",
+    "file-type": "^12.0.0",
+    "graphql": "^14.6.0",
+    "image-compressor.js": "^1.1.4",
+    "jquery": "^3.4.0",
+    "jwt-decode": "^2.2.0",
+    "materialize-css": "^0.100.2",
+    "panzoom": "^8.0.0",
+    "prop-types": "^15.6.2",
+    "python-shell": "^1.0.7",
+    "rc-slider": "^8.6.11",
+    "react": "^16.8.3",
+    "react-animated-css": "^1.0.4",
+    "react-apollo": "^3.1.3",
+    "react-color": "^2.17.3",
+    "react-contexify": "^4.1.1",
+    "react-dnd": "^9.3.2",
+    "react-dnd-html5-backend": "^9.3.2",
+    "react-dom": "^16.8.3",
+    "react-dropzone": "^10.1.5",
+    "react-fps-stats": "^0.1.1",
+    "react-lazyload": "^2.6.1",
+    "react-lottie": "^1.2.3",
+    "react-materialize": "^3.1.1",
+    "react-redux": "^6.0.0",
+    "react-reflex": "^3.0.13",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "react-timeago": "^4.4.0",
+    "react-treebeard": "^3.2.4",
+    "redux": "^4.0.1",
+    "redux-electron-store": "^0.6.4",
+    "redux-thunk": "^2.3.0",
+    "rete": "^1.2.1",
+    "rete-area-plugin": "^0.2.1",
+    "rete-comment-plugin": "^0.6.0",
+    "rete-connection-plugin": "^0.7.0",
+    "rete-context-menu-plugin": "^0.4.1",
+    "rete-react-render-plugin": "^0.1.2",
+    "rete-vue-render-plugin": "^0.3.4",
+    "socket.io-client": "^2.2.0",
+    "stats-js": "^1.0.0",
+    "three": "^0.106.2",
+    "three-full": "^17.1.0",
+    "three-gltf-exporter": "0.0.1",
+    "three-gltf-loader": "^1.101.0",
+    "three-orbitcontrols": "^2.102.1",
+    "typescript": "3.3.3333",
+    "typescript-collections": "^1.3.2",
+    "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "watch:scss": "sass --watch src/scss:src/css",
+    "watch:redux": "cd src/redux && tsc --watch",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"npm run start BROWSER=none\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "electron-builder -c.extraMetadata.main build/electron.js",
+    "preelectron-pack": "npm run build",
+    "electron-rebuild": "electron-rebuild -v 5.0.4 -w opencv4nodejs",
+    "electron-start": "electron ."
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/jest": "24.0.9",
+    "@types/jwt-decode": "^2.2.1",
+    "@types/node": "11.9.6",
+    "@types/rc-slider": "^8.6.3",
+    "@types/react": "16.8.6",
+    "@types/react-color": "^3.0.1",
+    "@types/react-dom": "16.8.2",
+    "@types/react-lazyload": "^2.5.0",
+    "@types/react-redux": "^7.0.9",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/uuid": "^3.4.4",
+    "concurrently": "^4.1.0",
+    "electron": "^5.0.4",
+    "electron-builder": "^20.44.4",
+    "electron-debug": "^2.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.0",
+    "prettier": "^1.15.3",
+    "terser": "^3.14.1",
+    "wait-on": "^3.2.0"
+  },
+  "build": {
+    "appId": "com.example.electron-cra",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "extends": null,
+    "electronDownload": {
+      "cache": "./cache"
+    },
+    "fileAssociations": [
+      {
+        "ext": "mpkg",
+        "name": "Material Designer Package",
+        "role": "editor"
+      }
+    ],
+    "extraResources": [
+      "textures",
+      "envmaps",
+      "lib"
+    ]
+  },
+  "main": "public/electron.js",
+  "author": "Lasantha M Senanayake",
+  "homepage": "."
+}

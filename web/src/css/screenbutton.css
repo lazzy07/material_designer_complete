@@ -1,0 +1,82 @@
+.neonButton {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  color: #4DB6AC;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  cursor: pointer; }
+
+.neonButton:hover {
+  background: #4DB6AC;
+  color: #252525;
+  box-shadow: 0 0 5px #4DB6AC, 0 0 5px #4DB6AC, 0 0 25px #4DB6AC, 0 0 50px #4DB6AC; }
+
+.neonButton span {
+  position: absolute;
+  display: block; }
+
+.neonButton span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4DB6AC);
+  animation: animate1 3s linear infinite; }
+
+@keyframes animate1 {
+  0% {
+    left: -100%; }
+  50%,
+  100% {
+    left: 100%; } }
+.neonButton span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #4DB6AC);
+  animation: animate2 3s linear infinite;
+  animation-delay: 1.5s; }
+
+@keyframes animate2 {
+  0% {
+    top: -100%; }
+  50%,
+  100% {
+    top: 100%; } }
+.neonButton span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4DB6AC);
+  animation: animate3 3s linear infinite;
+  animation-delay: 2s; }
+
+@keyframes animate3 {
+  0% {
+    right: -100%; }
+  50%,
+  100% {
+    right: 100%; } }
+.neonButton span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #4DB6AC);
+  animation: animate4 3s linear infinite;
+  animation-delay: 3s; }
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%; }
+  50%,
+  100% {
+    bottom: 100%; } }
+
+/*# sourceMappingURL=screenbutton.css.map */

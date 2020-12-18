@@ -1,0 +1,47 @@
+@import "./colors.scss";
+
+.menubarbutton {
+  padding-right: 8px;
+  padding-left: 8px;
+
+  &:hover {
+    background-color: $MENUBAR_HOVER_COLOR;
+    color: $ON_HOVER_MENU_TEXT_COLOR;
+  }
+}
+
+.menubarBlock {
+  background-color: $MENUBAR_COLOR;
+}
+
+.dropdownSubElement {
+  background-color: $MENUBAR_HOVER_COLOR;
+  padding: 5px;
+  padding-left: 10px;
+  min-width: 180px;
+
+  &:hover {
+    background-color: $BUTTON_COLOR;
+    color: $FONT_COLOR;
+  }
+}
+
+.dropDownBlock {
+  overflow: visible;
+
+  li {
+    // background-color: $MENUBAR_HOVER_COLOR;
+    color: $FONT_COLOR;
+    margin: 0px;
+    min-height: 0px;
+
+    .divider {
+      background-color: $MENU_DIVIDER_COLOR;
+    }
+
+    &:hover {
+      background-color: $MENUBAR_HOVER_COLOR;
+      color: $FONT_COLOR;
+    }
+  }
+}

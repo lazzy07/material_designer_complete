@@ -1,0 +1,96 @@
+version: "3"
+services:
+  md_db:
+    ports:
+      - "23000:27017"
+    env_file: docker.dev.env
+
+  md_srv_data:
+    ports:
+      - "27030:80"
+    env_file: docker.dev.env
+    build:
+      args:
+        - BUILD_ENV=development
+    command: "npm run run-dev"
+    volumes:
+      - ./src/common:/usr/src/app/src/common
+      - ./src/ms_data:/usr/src/app/src/main
+      - ./package.json:/usr/src/app/package.json
+      - ./tsconfig.json:/usr/src/app/tsconfig.json
+      - ./webpack.config.js:/usr/src/app/webpack.config.js
+      - ./custom.d.ts:/usr/src/app/custom.d.ts
+
+  md_srv_post:
+    ports:
+      - "27020:80"
+    env_file: docker.dev.env
+    build:
+      args:
+        - BUILD_ENV=development
+    command: "npm run run-dev"
+    volumes:
+      - ./src/common:/usr/src/app/src/common
+      - ./src/ms_post:/usr/src/app/src/main
+      - ./package.json:/usr/src/app/package.json
+      - ./tsconfig.json:/usr/src/app/tsconfig.json
+      - ./webpack.config.js:/usr/src/app/webpack.config.js
+      - ./custom.d.ts:/usr/src/app/custom.d.ts
+
+  md_srv_user:
+    ports:
+      - "27000:80"
+    env_file: docker.dev.env
+    build:
+      args:
+        - BUILD_ENV=development
+    command: "npm run run-dev"
+    volumes:
+      - ./src/common:/usr/src/app/src/common
+      - ./src/ms_user:/usr/src/app/src/main
+      - ./package.json:/usr/src/app/package.json
+      - ./tsconfig.json:/usr/src/app/tsconfig.json
+      - ./webpack.config.js:/usr/src/app/webpack.config.js
+      - ./custom.d.ts:/usr/src/app/custom.d.ts
+
+  md_srv_web:
+    env_file: docker.dev.env
+    build:
+      args:
+        - BUILD_ENV=development
+    command: "npm run run-dev"
+    volumes:
+      - ./src/ms_web:/usr/src/app/src/main
+      - ./package.json:/usr/src/app/package.json
+      - ./tsconfig.json:/usr/src/app/tsconfig.json
+      - ./webpack.config.js:/usr/src/app/webpack.config.js
+      - ./custom.d.ts:/usr/src/app/custom.d.ts
+      - ./src/common:/usr/src/app/src/common
+
+  md_srv_editor:
+    env_file: docker.dev.env
+    build:
+      args:
+        - BUILD_ENV=development
+    command: "npm run run-dev"
+    volumes:
+      - ./src/common:/usr/src/app/src/common
+      - ./src/ms_editor:/usr/src/app/src/main
+      - ./package.json:/usr/src/app/package.json
+      - ./tsconfig.json:/usr/src/app/tsconfig.json
+      - ./webpack.config.js:/usr/src/app/webpack.config.js
+      - ./custom.d.ts:/usr/src/app/custom.d.ts
+
+  md_srv_cdn:
+    env_file: docker.dev.env
+    build:
+      args:
+        - BUILD_ENV=development
+    command: "npm run run-dev"
+    volumes:
+      - ./src/common:/usr/src/app/src/common
+      - ./src/ms_cdn:/usr/src/app/src/main
+      - ./package.json:/usr/src/app/package.json
+      - ./tsconfig.json:/usr/src/app/tsconfig.json
+      - ./webpack.config.js:/usr/src/app/webpack.config.js
+      - ./custom.d.ts:/usr/src/app/custom.d.ts

@@ -1,0 +1,93 @@
+@import "./colors.scss";
+
+.exrElement {
+  padding-left: 5;
+  padding-right: 5;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 4;
+  padding-bottom: 4;
+  background-color: $MENUBAR_HOVER_COLOR;
+  margin-top: 15;
+  margin-bottom: 15;
+}
+
+.exrElement:hover {
+  background-color: $TAB_BUTTON_COLOR;
+}
+
+.libraryShelf {
+  background-color: $MENUBAR_HOVER_COLOR;
+  overflow: hidden;
+}
+
+.tabs {
+  .tab {
+    a {
+      color: $TAB_BUTTON_COLOR;
+      font-weight: bolder;
+
+      .active {
+        color: $TAB_BUTTON_COLOR;
+      }
+
+      :focus {
+        color: $TAB_BUTTON_COLOR;
+      }
+    }
+  }
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  background-color: transparent;
+  color: $TAB_BUTTON_COLOR;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  // background-color: rgba(246, 178, 181, 0.2);
+  background-color: $TRANSPARENT_BUTTON_COLOR;
+  outline: none;
+}
+
+.tabs .tab a {
+  color: $TAB_BUTTON_COLOR;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color .28s ease;
+  transition: color .28s ease;
+}
+
+.tabs .indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: $TAB_BUTTON_COLOR;
+  will-change: left, right;
+}
+
+.libraryItem:hover {
+  background-color: $MENUBAR_COLOR;
+}
+
+.libraryItem:active {
+  background-color: $BUTTON_COLOR;
+}
+
+.libControllerItem:hover {
+  background-color: $MENUBAR_COLOR;
+}
+
+.libActiveControl {
+  background-color: $BUTTON_COLOR;
+}
+
+.dropper:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}

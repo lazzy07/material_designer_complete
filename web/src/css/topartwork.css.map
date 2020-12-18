@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,SAAU;EACR,UAAU,EAAE,KAAK;EACjB,WAAW,EAAE,KAAK;;AAIpB,cAAe;EACb,KAAK,EAAE,gBAAgB",
+"sources": ["../scss/topartwork.scss"],
+"names": [],
+"file": "topartwork.css"
+}

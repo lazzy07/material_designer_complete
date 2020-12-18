@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,WAAY;EACV,gBAAgB,ECUI,OAAO",
+"sources": ["../scss/editortech.scss","../scss/colors.scss"],
+"names": [],
+"file": "editortech.css"
+}

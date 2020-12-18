@@ -1,0 +1,6 @@
+
+7/4/2019, 8:09:42 AM	server	admin	unknown	SERVER_RESTART
+7/4/2019, 8:09:42 AM	connection_socket	server	undefined	CONNECTION_ESTABLISED_ON_PORT_9900
+7/4/2019, 8:09:43 AM	database	server	admin	DATABASE_CONNECTED
+7/4/2019, 8:12:22 AM	::ffff:127.0.0.1	server	undefined	SOCKET_CONNECTION_ESTABLISHED
+7/4/2019, 8:16:22 AM	::ffff:127.0.0.1	server	undefined	SOCKET_CONNECTION_ESTABLISHED

@@ -1,0 +1,11 @@
+.importFile {
+  height: 100px; }
+
+.importFile:hover {
+  background-color: #353434; }
+
+.importFileActive {
+  height: 100px;
+  background-color: #00695C; }
+
+/*# sourceMappingURL=importscreen.css.map */

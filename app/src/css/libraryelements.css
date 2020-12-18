@@ -1,0 +1,71 @@
+.exrElement {
+  padding-left: 5;
+  padding-right: 5;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 4;
+  padding-bottom: 4;
+  background-color: #353434;
+  margin-top: 15;
+  margin-bottom: 15; }
+
+.exrElement:hover {
+  background-color: #4DB6AC; }
+
+.libraryShelf {
+  background-color: #353434;
+  overflow: hidden; }
+
+.tabs .tab a {
+  color: #4DB6AC;
+  font-weight: bolder; }
+  .tabs .tab a .active {
+    color: #4DB6AC; }
+  .tabs .tab a :focus {
+    color: #4DB6AC; }
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  background-color: transparent;
+  color: #4DB6AC; }
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: rgba(0, 105, 92, 0.2);
+  outline: none; }
+
+.tabs .tab a {
+  color: #4DB6AC;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color .28s ease;
+  transition: color .28s ease; }
+
+.tabs .indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #4DB6AC;
+  will-change: left, right; }
+
+.libraryItem:hover {
+  background-color: #313231; }
+
+.libraryItem:active {
+  background-color: #00695C; }
+
+.libControllerItem:hover {
+  background-color: #313231; }
+
+.libActiveControl {
+  background-color: #00695C; }
+
+.dropper:focus {
+  outline: -webkit-focus-ring-color auto 0px; }
+
+/*# sourceMappingURL=libraryelements.css.map */

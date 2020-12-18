@@ -1,0 +1,56 @@
+version: "3"
+
+services:
+  md_db:
+    expose:
+      - "27017"
+
+  md_srv_data:
+    expose:
+      - "80"
+    env_file: docker.prod.env
+    restart: always
+    build:
+      args:
+        - BUILD_ENV=production
+    command: "npm start"
+
+  md_srv_post:
+    expose:
+      - "80"
+    env_file: docker.prod.env
+    restart: always
+    build:
+      args:
+        - BUILD_ENV=production
+    command: "npm start"
+
+  md_srv_user:
+    expose:
+      - "80"
+    env_file: docker.prod.env
+    restart: always
+    build:
+      args:
+        - BUILD_ENV=production
+    command: "npm start"
+
+  md_srv_web:
+    restart: always
+    env_file: docker.prod.env
+    build:
+      args:
+        - BUILD_ENV=production
+    command: "npm start"
+
+  md_srv_editor:
+    restart: always
+    env_file: docker.prod.env
+
+  md_srv_cdn:
+    restart: always
+    env_file: docker.prod.env
+    build:
+      args:
+        - BUILD_ENV=production
+    command: "npm start"

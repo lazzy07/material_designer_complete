@@ -1,0 +1,80 @@
+.Color {
+  background-color: #000000;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+}
+.Color .title {
+  font-weight: bolder;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #e8232d;
+  border-radius: 8px 8px 0 0;
+}
+.Color .input {
+  display: flex;
+}
+.Color .output {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: -5px;
+}
+.Color .input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -5px;
+}
+.Color .socket {
+  background-color: #e8232d;
+}
+
+.Grayscale {
+  background-color: #00796B;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+}
+.Grayscale .title {
+  font-weight: bolder;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #004D40;
+  border-radius: 8px 8px 0 0;
+}
+.Grayscale .input {
+  display: flex;
+}
+.Grayscale .output {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: -5px;
+}
+.Grayscale .input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -5px;
+}
+.Grayscale .socket {
+  background-color: #868686;
+}
+
+.selected {
+  border: 2px solid white;
+}
+
+.connection .main-path {
+  stroke-width: 8px;
+}
+
+.socket-input-tex_grayscale .main-path {
+  stroke: #868686;
+  filter: drop-shadow(0 2px 1px #868686);
+}
+
+/*# sourceMappingURL=node.css.map */

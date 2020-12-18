@@ -1,0 +1,302 @@
+@import "./colors.scss";
+
+
+.Color {
+  background-color: #000000;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+
+  .title {
+    font-weight: bolder;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #e8232d;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .output {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .tex_color {
+    background-color: $COLOR_SOCKET_COLOR;
+  }
+
+  .tex_grayscale {
+    background-color: $GRAYSCALE_SOCKET_COLOR;
+  }
+}
+
+.Grayscale {
+  background-color: $GRAYSCALE_NODE_BACKGROUND_COLOR;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+
+  .title {
+    font-weight: bolder;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $GRAYSCALE_NODE_TITLE_BACKGROUND_COLOR;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .output {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .tex_color {
+    background-color: $COLOR_SOCKET_COLOR;
+  }
+
+  .tex_grayscale {
+    background-color: $GRAYSCALE_SOCKET_COLOR;
+  }
+}
+
+.Viewer {
+  background-color: $VIEWER_NODE_BACKGROUND_COLOR;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+
+  .title {
+    font-weight: bolder;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $VIEWER_NODE_TITLE_BACKGROUND_COLOR;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .output {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+
+  .tex_color {
+    background-color: $COLOR_SOCKET_COLOR;
+  }
+
+  .tex_grayscale {
+    background-color: $GRAYSCALE_SOCKET_COLOR;
+  }
+}
+
+
+.selected {
+  border: 4px solid $SELECTED_BORDER_COLOR;
+}
+
+.connection {
+  .main-path {
+    stroke-width: 8px;
+  }
+}
+
+.socket-input-tex_grayscale {
+  .main-path {
+    stroke: $GRAYSCALE_NODE_CONNECTION_COLOR;
+    filter: drop-shadow(0 2px 1px $GRAYSCALE_NODE_CONNECTION_COLOR);
+  }
+}
+
+.socket-input-tex_color {
+  .main-path {
+    stroke: $COLOR_NODE_CONNECTION_COLOR;
+    filter: drop-shadow(0 2px 1px $COLOR_NODE_CONNECTION_COLOR);
+  }
+}
+
+.node-editor {
+  background-color: #252525;
+  background-image: linear-gradient($MENUBAR_HOVER_COLOR 2px, transparent 2px),
+    linear-gradient(90deg, $MENUBAR_HOVER_COLOR 2px, transparent 2px),
+    linear-gradient($MENUBAR_HOVER_COLOR 1px, transparent 1px),
+    linear-gradient(90deg, $MENUBAR_HOVER_COLOR 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.context-menu {
+  background-color: $DEFAULT_COLOR;
+}
+
+
+.Generator {
+  background-color: $GENERATOR_BACKGROUND;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+
+  .title {
+    font-weight: bolder;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $GENERATOR_TITLE;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .output {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .tex_color {
+    background-color: $COLOR_SOCKET_COLOR;
+  }
+
+  .tex_grayscale {
+    background-color: $GRAYSCALE_SOCKET_COLOR;
+  }
+}
+
+.Operator {
+  background-color: $OPERATOR_BACKGROUND;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+
+  .title {
+    font-weight: bolder;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $OPERATOR_TITLE;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .output {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .tex_color {
+    background-color: $COLOR_SOCKET_COLOR;
+  }
+
+  .tex_grayscale {
+    background-color: $GRAYSCALE_SOCKET_COLOR;
+  }
+}
+
+.Generator {
+  background-color: $GENERATOR_BACKGROUND;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+
+  .title {
+    font-weight: bolder;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $GENERATOR_TITLE;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .output {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .tex_color {
+    background-color: $COLOR_SOCKET_COLOR;
+  }
+
+  .tex_grayscale {
+    background-color: $GRAYSCALE_SOCKET_COLOR;
+  }
+}
+
+.Converter {
+  background-color: $CONVERTER_BACKGROUND;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 10px;
+
+  .title {
+    font-weight: bolder;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $CONVERTER_TITLE;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .output {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .tex_color {
+    background-color: $COLOR_SOCKET_COLOR;
+  }
+
+  .tex_grayscale {
+    background-color: $GRAYSCALE_SOCKET_COLOR;
+  }
+}

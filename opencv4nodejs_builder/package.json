@@ -1,0 +1,16 @@
+{
+  "name": "opencv4nodejs_builder",
+  "version": "1.0.0",
+  "description": "Opencv4nodejs builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron-rebuild": "electron-rebuild -v 5.0.4 -w opencv4nodejs"
+  },
+  "author": "Lasantha M",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^5.0.4",
+    "opencv4nodejs": "^5.0.0"
+  }
+}

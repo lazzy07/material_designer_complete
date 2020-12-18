@@ -1,0 +1,314 @@
+import React from "react";
+import reactCSS from "reactcss";
+import color from "react-color/lib/helpers/color";
+
+import { EditableInput } from "react-color/lib/components/common";
+import UnfoldMoreHorizontalIcon from "@icons/material/UnfoldMoreHorizontalIcon";
+import { DEFAULT_FONT_COLOR, SECONDARY_COLOR } from "../../constants";
+import { ACTIVE_COLOR } from "./../../constants/index";
+
+export class ChromeFields extends React.Component<any, any> {
+  state = {
+    view: ""
+  };
+
+  componentDidMount() {
+    if (this.props.hsl.a === 1 && this.state.view !== "hex") {
+      this.setState({ view: "hex" });
+    } else if (this.state.view !== "rgb" && this.state.view !== "hsl") {
+      this.setState({ view: "rgb" });
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.hsl.a !== 1 && this.state.view === "hex") {
+      this.setState({ view: "rgb" });
+    }
+  }
+
+  toggleViews = () => {
+    if (this.state.view === "hex") {
+      this.setState({ view: "rgb" });
+    } else if (this.state.view === "rgb") {
+      this.setState({ view: "hsl" });
+    } else if (this.state.view === "hsl") {
+      if (this.props.hsl.a === 1) {
+        this.setState({ view: "hex" });
+      } else {
+        this.setState({ view: "rgb" });
+      }
+    }
+  };
+
+  handleChange = (data, e) => {
+    if (data.hex) {
+      color.isValidHex(data.hex) &&
+        this.props.onChange(
+          {
+            hex: data.hex,
+            source: "hex"
+          },
+          e
+        );
+    } else if (data.r || data.g || data.b) {
+      this.props.onChange(
+        {
+          r: data.r || this.props.rgb.r,
+          g: data.g || this.props.rgb.g,
+          b: data.b || this.props.rgb.b,
+          source: "rgb"
+        },
+        e
+      );
+    } else if (data.a) {
+      if (data.a < 0) {
+        data.a = 0;
+      } else if (data.a > 1) {
+        data.a = 1;
+      }
+
+      this.props.onChange(
+        {
+          h: this.props.hsl.h,
+          s: this.props.hsl.s,
+          l: this.props.hsl.l,
+          a: Math.round(data.a * 100) / 100,
+          source: "rgb"
+        },
+        e
+      );
+    } else if (data.h || data.s || data.l) {
+      // Remove any occurances of '%'.
+      if (typeof data.s === "string" && data.s.includes("%")) {
+        data.s = data.s.replace("%", "");
+      }
+      if (typeof data.l === "string" && data.l.includes("%")) {
+        data.l = data.l.replace("%", "");
+      }
+
+      this.props.onChange(
+        {
+          h: data.h || this.props.hsl.h,
+          s: Number((data.s && data.s) || this.props.hsl.s),
+          l: Number((data.l && data.l) || this.props.hsl.l),
+          source: "hsl"
+        },
+        e
+      );
+    }
+  };
+
+  showHighlight = e => {
+    e.currentTarget.style.background = SECONDARY_COLOR;
+  };
+
+  hideHighlight = e => {
+    e.currentTarget.style.background = "transparent";
+  };
+
+  render() {
+    const styles = reactCSS(
+      {
+        default: {
+          wrap: {
+            paddingTop: "16px",
+            display: "flex"
+          },
+          fields: {
+            flex: "1",
+            display: "flex",
+            marginLeft: "-6px"
+          },
+          field: {
+            paddingLeft: "6px",
+            width: "100%"
+          },
+          alpha: {
+            paddingLeft: "6px",
+            width: "100%"
+          },
+          toggle: {
+            color: ACTIVE_COLOR,
+            width: "32px",
+            textAlign: "right",
+            position: "relative"
+          },
+          icon: {
+            color: ACTIVE_COLOR,
+            marginRight: "-4px",
+            marginTop: "12px",
+            cursor: "pointer",
+            position: "relative"
+          },
+          iconHighlight: {
+            position: "absolute",
+            width: "24px",
+            height: "28px",
+            background: SECONDARY_COLOR,
+            borderRadius: "4px",
+            top: "10px",
+            left: "12px",
+            display: "none"
+          },
+          input: {
+            fontSize: "16px",
+            color: DEFAULT_FONT_COLOR,
+            width: "100%",
+            borderRadius: "2px",
+            border: "none",
+            boxShadow: `inset 0 0 0 2px ${SECONDARY_COLOR}`,
+            height: "31px",
+            textAlign: "center"
+          },
+          label: {
+            textTransform: "uppercase",
+            fontSize: "14px",
+            // lineHeight: "14px",
+            color: DEFAULT_FONT_COLOR,
+            textAlign: "center",
+            display: "block",
+            marginTop: "5px"
+          },
+          svg: {
+            fill: ACTIVE_COLOR,
+            width: "24px",
+            height: "24px",
+            border: "1px transparent solid",
+            borderRadius: "5px"
+          }
+        },
+        disableAlpha: {
+          alpha: {
+            display: "none"
+          }
+        }
+      },
+      this.props,
+      this.state
+    );
+
+    let fields;
+    if (this.state.view === "hex") {
+      fields = (
+        <div style={styles.fields} className="flexbox-fix">
+          <div style={styles.field}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="hex"
+              value={this.props.hex}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+        </div>
+      );
+    } else if (this.state.view === "rgb") {
+      fields = (
+        <div style={styles.fields} className="flexbox-fix">
+          <div style={styles.field}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="r"
+              value={this.props.rgb.r}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+          <div style={styles.field}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="g"
+              value={this.props.rgb.g}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+          <div style={styles.field}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="b"
+              value={this.props.rgb.b}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+          <div style={styles.alpha}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="a"
+              value={this.props.rgb.a}
+              arrowOffset={0.01}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+        </div>
+      );
+    } else if (this.state.view === "hsl") {
+      fields = (
+        <div style={styles.fields} className="flexbox-fix">
+          <div style={styles.field}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="h"
+              value={Math.round(this.props.hsl.h)}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+          <div style={styles.field}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="s"
+              value={`${Math.round(this.props.hsl.s * 100)}%`}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+          <div style={styles.field}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="l"
+              value={`${Math.round(this.props.hsl.l * 100)}%`}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+          <div style={styles.alpha}>
+            <EditableInput
+              style={{ input: styles.input, label: styles.label }}
+              label="a"
+              value={this.props.hsl.a}
+              arrowOffset={0.01}
+              // @ts-ignore
+              onChange={this.handleChange}
+            />
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div style={styles.wrap} className="flexbox-fix">
+        {fields}
+        <div style={styles.toggle}>
+          <div
+            style={styles.icon}
+            onClick={this.toggleViews}
+            // @ts-ignore
+            ref={icon => (this.icon = icon)}
+          >
+            <UnfoldMoreHorizontalIcon
+              style={styles.svg}
+              onMouseOver={this.showHighlight}
+              onMouseEnter={this.showHighlight}
+              onMouseOut={this.hideHighlight}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default ChromeFields;

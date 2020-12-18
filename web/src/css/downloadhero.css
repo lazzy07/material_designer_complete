@@ -1,0 +1,21 @@
+.downloadBackground {
+  height: 90vh;
+  background: linear-gradient(to left, #353434, #4DB6AC);
+  background-blend-mode: luminosity; }
+
+.screenshot {
+  position: absolute;
+  margin-left: 140px;
+  left: 20;
+  top: 30%;
+  min-width: 500px;
+  min-height: 300px;
+  transform: rotate(-45deg) skewY(25deg);
+  box-shadow: -15px 40px 7px rgba(0, 0, 0, 0.2);
+  transition: 0.5s; }
+
+.screenshot:hover {
+  transform: rotate(-45deg) skewY(25deg) translate(20px, -20px);
+  box-shadow: -60px 100px 4px rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=downloadhero.css.map */

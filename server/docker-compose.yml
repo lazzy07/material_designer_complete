@@ -1,0 +1,109 @@
+version: "3"
+services:
+  md_db:
+    container_name: md_db
+    image: mongo:4
+
+  ######################################### Data service ########################################
+  md_srv_data:
+    container_name: md_srv_data
+    build:
+      context: ./
+      dockerfile: ./src/ms_data/data.dockerfile
+    depends_on:
+      - md_srv_user
+      - md_db
+    environment:
+      - WAIT_HOSTS=md_db:27017
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    tty: true
+
+  ######################################### Post service ########################################
+  md_srv_post:
+    container_name: md_srv_post
+    build:
+      context: ./
+      dockerfile: ./src/ms_post/post.dockerfile
+    depends_on:
+      - md_srv_data
+      - md_db
+    environment:
+      - WAIT_HOSTS=md_db:27017
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    tty: true
+
+  ######################################### user service ########################################
+  md_srv_user:
+    container_name: md_srv_user
+    build:
+      context: ./
+      dockerfile: ./src/ms_user/user.dockerfile
+    depends_on:
+      - md_db
+    environment:
+      - WAIT_HOSTS=md_db:27017
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    tty: true
+
+  ############################## web service ########################################
+  md_srv_web:
+    container_name: md_srv_web
+    build:
+      context: ./
+      dockerfile: ./src/ms_web/web.dockerfile
+    ports:
+      - "80:3000"
+    depends_on:
+      - md_srv_data
+      - md_srv_user
+      - md_db
+    environment:
+      - WAIT_HOSTS=md_db:27017
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    tty: true
+
+  ######################################### editor service ########################################
+  md_srv_editor:
+    container_name: md_srv_editor
+    build:
+      context: ./
+      dockerfile: ./src/ms_editor/editor.dockerfile
+    ports:
+      - "5000:3000"
+    depends_on:
+      - md_srv_data
+      - md_srv_user
+      - md_db
+    environment:
+      - WAIT_HOSTS=md_db:27017
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    tty: true
+
+  ######################################### cdn service ########################################
+  md_srv_cdn:
+    container_name: md_srv_cdn
+    build:
+      context: ./
+      dockerfile: ./src/ms_cdn/cdn.dockerfile
+    ports:
+      - "4000:3000"
+    depends_on:
+      - md_srv_data
+      - md_srv_user
+      - md_db
+    environment:
+      - WAIT_HOSTS=md_db:27017
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=30
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    tty: true

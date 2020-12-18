@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,OAAQ;EACN,gBAAgB,ECSI,OAAO",
+"sources": ["../scss/footer.scss","../scss/colors.scss"],
+"names": [],
+"file": "footer.css"
+}

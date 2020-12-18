@@ -1,0 +1,11 @@
+@import "./colors.scss";
+
+.carousel {
+  min-height: 400px;
+  perspective: 600px;
+
+}
+
+.carousel-item {
+  width: 390px !important;
+}

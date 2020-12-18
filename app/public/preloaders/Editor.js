@@ -1,0 +1,10 @@
+console.log("EDITOR PRELOAD");
+const path = require("path");
+const rootPath = require('electron-root-path').rootPath;
+const isDev = require("electron-is-dev");
+window.type = "editor";
+console.log("ROOT_PATH :" + rootPath);
+const mat = require(path.join(__dirname, "./bindings/mat/Release/mat-img-processing.node"));
+window.mat = mat;
+const cv = require(isDev ? path.join(rootPath, "/lib/cv/opencv4nodejs") : path.join(rootPath, "/resources/lib/cv/opencv4nodejs"));
+window.cv = cv;

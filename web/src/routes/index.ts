@@ -1,0 +1,16 @@
+export const SIGNUP_PAGE = "/signup";
+export const LOGIN_PAGE = "/login";
+export const HOME_PAGE = "/";
+export const TOP_SCREEN = "/top";
+export const USER_SCREEN = "/user/:id";
+export const DOWNLOAD_SCREEN = "/download";
+export const NEWS_FEED = "/newsfeed";
+export const EDITOR_SCREEN = "/editor";
+export const SEARCH_SCREEN = "/search";
+export const USER_SIGNUP_PAGE = "/signup/user";
+export const COMPANY_SIGNUP_PAGE = "/signup/company";
+export const COMPANY_SCREEN = "/company/:id";
+export const MATERIAL_SCREEN = "/material/:id";
+export const SETTINGS_SCREEN = "/settings";
+export const APIKEYS_SCREEN = "/apikeys";
+export const SECUREKEYS_SCREEN = "/securekeys";

@@ -1,0 +1,14 @@
+@import "./colors.scss";
+
+.importFile {
+  height: 100px;
+}
+
+.importFile:hover {
+  background-color: $MENUBAR_HOVER_COLOR;
+}
+
+.importFileActive {
+  height: 100px;
+  background-color: $BUTTON_COLOR;
+}

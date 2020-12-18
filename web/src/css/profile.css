@@ -1,0 +1,22 @@
+#pHeroBackground {
+  overflow: hidden; }
+
+#pHeroOverlay {
+  position: absolute;
+  background: linear-gradient(to left, #353434, #4DB6AC);
+  width: 100%;
+  height: 90vh;
+  opacity: 50%;
+  overflow: hidden; }
+
+#skewSectionProfile {
+  position: absolute;
+  bottom: -230px;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  transform: skewY(-6deg);
+  background-color: #252525;
+  transform-origin: top left; }
+
+/*# sourceMappingURL=profile.css.map */

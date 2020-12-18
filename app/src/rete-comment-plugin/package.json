@@ -1,0 +1,54 @@
+{
+  "_from": "rete-comment-plugin",
+  "_id": "rete-comment-plugin@0.6.0",
+  "_inBundle": false,
+  "_integrity": "sha512-668d/cz79SbVpHd27czeHRVk4nbGNsm4RUo9BaacmKPkxVcoRnmeOtITUoCi2z9D4Yc4PP78cO+/n6kRK2oF6w==",
+  "_location": "/rete-comment-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "rete-comment-plugin",
+    "name": "rete-comment-plugin",
+    "escapedName": "rete-comment-plugin",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/rete-comment-plugin/-/rete-comment-plugin-0.6.0.tgz",
+  "_shasum": "fced03c1ec397cc127aab131bdd4a4fc589bf3d2",
+  "_spec": "rete-comment-plugin",
+  "_where": "F:\\Projects\\material_designer\\app",
+  "author": {
+    "name": "Vitaliy Stoliarov"
+  },
+  "bugs": {
+    "url": "https://github.com/retejs/comment-plugin/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Rete comment plugin ==== #### Rete.js plugin",
+  "devDependencies": {
+    "rete-cli": "^0.5.0",
+    "rollup-plugin-sass": "^0.6.1"
+  },
+  "homepage": "https://github.com/retejs/comment-plugin#readme",
+  "license": "MIT",
+  "main": "build/comment-plugin.common.js",
+  "module": "build/comment-plugin.esm.js",
+  "name": "rete-comment-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retejs/comment-plugin.git"
+  },
+  "scripts": {
+    "build": "rete --build rete.config.js",
+    "build:dev": "rete --build rete.config.js --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "version": "0.6.0"
+}

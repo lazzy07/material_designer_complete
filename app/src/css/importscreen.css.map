@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,WAAY;EACV,MAAM,EAAE,KAAK;;AAGf,iBAAkB;EAChB,gBAAgB,ECqBI,OAAO;;ADlB7B,iBAAkB;EAChB,MAAM,EAAE,KAAK;EACb,gBAAgB,ECiBH,OAAO",
+"sources": ["../scss/importscreen.scss","../scss/colors.scss"],
+"names": [],
+"file": "importscreen.css"
+}

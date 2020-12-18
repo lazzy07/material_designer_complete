@@ -1,0 +1,32 @@
+.menubarbutton {
+  padding-right: 8px;
+  padding-left: 8px; }
+  .menubarbutton:hover {
+    background-color: #353434;
+    color: #4DB6AC; }
+
+.menubarBlock {
+  background-color: #313231; }
+
+.dropdownSubElement {
+  background-color: #353434;
+  padding: 5px;
+  padding-left: 10px;
+  min-width: 180px; }
+  .dropdownSubElement:hover {
+    background-color: #00695C;
+    color: #fff; }
+
+.dropDownBlock {
+  overflow: visible; }
+  .dropDownBlock li {
+    color: #fff;
+    margin: 0px;
+    min-height: 0px; }
+    .dropDownBlock li .divider {
+      background-color: #868686; }
+    .dropDownBlock li:hover {
+      background-color: #353434;
+      color: #fff; }
+
+/*# sourceMappingURL=dropdown.css.map */

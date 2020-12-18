@@ -1,0 +1,83 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/react-components": "^3.1.3",
+    "@material-ui/core": "^4.1.3",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.10",
+    "@types/react": "16.8.22",
+    "@types/react-dom": "16.8.4",
+    "apollo-boost": "^0.4.7",
+    "apollo-link-token-refresh": "^0.2.7",
+    "axios": "^0.19.2",
+    "axios-auth-refresh": "^2.2.3",
+    "compressorjs": "^1.0.6",
+    "graphql": "^14.6.0",
+    "jquery": "^3.4.1",
+    "jwt-decode": "^2.2.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "react": "^16.8.6",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-animated-css": "^1.2.1",
+    "react-device-detect": "^1.11.14",
+    "react-dom": "^16.8.6",
+    "react-dropzone": "^10.2.1",
+    "react-image-crop": "^8.4.0",
+    "react-lottie": "^1.2.3",
+    "react-materialize": "^3.3.3",
+    "react-medium-image-zoom": "^4.0.3",
+    "react-particles-js": "^2.7.1",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-timeago": "^4.4.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "socket.io-client": "^2.2.0",
+    "three": "^0.106.2",
+    "three-full": "^17.1.0",
+    "three-gltf-exporter": "0.0.1",
+    "three-gltf-loader": "^1.101.0",
+    "three-orbitcontrols": "^2.102.1",
+    "typescript": "3.5.2",
+    "uuid": "^7.0.1"
+  },
+  "scripts": {
+    "watch:scss": "sass --watch src/scss:src/css",
+    "watch:redux": "cd src/redux && tsc --watch",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jwt-decode": "^2.2.1",
+    "@types/materialize-css": "^1.0.7",
+    "@types/react-animate-on-scroll": "^2.1.2",
+    "@types/react-image-crop": "^8.1.2",
+    "@types/react-lottie": "^1.2.3",
+    "@types/react-medium-image-zoom": "^3.0.0",
+    "@types/react-redux": "^7.1.1",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/react-timeago": "^4.1.1",
+    "@types/socket.io-client": "^1.4.32",
+    "@types/uuid": "^7.0.0"
+  }
+}

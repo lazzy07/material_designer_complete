@@ -1,0 +1,1 @@
+{"version":3,"file":"SettingsActions.js","sourceRoot":"","sources":["../../../../src/redux/actions/SettingsActions.ts"],"names":[],"mappings":";;AAGa,QAAA,WAAW,GAAG,aAAa,CAAC;AAC5B,QAAA,mBAAmB,GAAG,qBAAqB,CAAC;AAE5C,QAAA,iBAAiB,GAAG,UAAC,IAAiB;IACjD,OAAO;QACL,IAAI,EAAE,2BAAmB;QACzB,OAAO,EAAE,IAAI;KACd,CAAC;AACJ,CAAC,CAAC"}

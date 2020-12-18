@@ -1,0 +1,26 @@
+.welcomeBackground {
+  border-radius: 10px;
+  height: 100vh;
+  overflow: hidden; }
+
+.welcomeGradient {
+  background-image: linear-gradient(to right, rgba(0, 245, 200, 0), #252525, #252525); }
+
+.welcomeContent {
+  padding: 10px; }
+
+.fileElement {
+  padding-left: 5;
+  padding-right: 5;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 4;
+  padding-bottom: 4;
+  background-color: #353434;
+  margin-top: 15;
+  margin-bottom: 15; }
+
+.fileElement:hover {
+  background-color: #4DB6AC; }
+
+/*# sourceMappingURL=welcome.css.map */
